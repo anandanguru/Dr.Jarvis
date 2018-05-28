@@ -114,7 +114,7 @@ app.get('/', function (req, res) {
 	var c=	[
 			  {
 				name:'Gokul',
-				dept:'cardilogy',
+				dept:'cardiology',
 				floor:'Second floor',
 				age:30,
 				sex:'Male',
@@ -139,7 +139,7 @@ app.get('/', function (req, res) {
 
 
 				name:'Prakash',
-				dept:'cycology',
+				dept:'psycology',
 				floor:'Second floor',
 				age:40,
 				sex:'male',
@@ -165,7 +165,7 @@ app.get('/', function (req, res) {
 			  },
 			    {  
 				name:'Kayal',
-				dept:'cardilogy',
+				dept:'cardiology',
 				floor:'Second floor',
 				age:20,
 				sex:'Female',
@@ -178,7 +178,7 @@ app.get('/', function (req, res) {
 			  },
 			  {  
 				name:'Dhaya',
-				dept:'cardilogy',
+				dept:'cardiology',
 				floor:'Second floor',
 				age:20,
 				sex:'Female',
@@ -194,32 +194,6 @@ app.get('/', function (req, res) {
            ];
 	res.status(200).json(c);
 });
-// app.post('/signupdata',function(req,res){
-	// 	db.collection("users").insertOne(req.body, function(err, res) {
- //        if (err) throw err;
- //        console.log("Document inserted");
- //        // close the connection to db when you are done with it
- //        db.close();
- //    });
-	// console.log(req.body);
-// 	MongoClient.connect('mongodb://127.0.0.1:27017/doctorapp', function(err, db) {
-// 	if (err) throw err;
-// 	// db pointing to newdb
-// 	console.log("connected");
-
-// 	// document to be inserted
-// 	var doc = req.body;
-	
-// 	// insert document to 'users' collection using insertOne
-// 	db.collection("user").insertOne(doc, function(err, res) {
-// 		if (err) throw err;
-// 		console.log("Document inserted");
-// 		// close the connection to db when you are done with it
-// 		db.close();
-// 	});
-// });
-// });
-
 
 app.post('/update',function(req,res){
 console.log(req.body);
@@ -249,48 +223,3 @@ for(i=0;i<obj.patientRecord.length;i++){
 fs.writeFileSync('./patientrecord.json',JSON.stringify(obj,null,2));
 res.json(response);
 });
-
-
-
-
-
-
-
-// //update gokul weight
-
-
-
-
-
-
-
-
-// var http = require('http');
-
-
-// var http=require('http')
-// var server = http.createServer(function(req, res) {
-
-// res.writeHead(200).json({
-
-// 	name:gokul
-// })
-
-// });
-// server.listen(8000);
-// var express=require('express');
-// var router=express.Router();
-// router.post('/',function(req,res,next){
-
-// res.json([
-// {
-
-// id:1,
-// message:"hello"
-
-// }
-// 	])
-
-
-// });
-//  module.exports=router;
